@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillforge"
+version = "0.1.0"
+description = "Generate shareable AI agent skill packs from repos, docs, URLs, or topics."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "SkillForge Contributors" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+skillforge = "skillforge.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
